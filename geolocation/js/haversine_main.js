@@ -1,4 +1,4 @@
-function calculateDistance(lat, lon){
+function calculateDistances(lat, lon){
 
     let dpulze = haversine(lat, lon,2.922561,101.650965)
     let pyramid = haversine(lat, lon,3.073065,101.607787)
@@ -26,8 +26,8 @@ elLocate.addEventListener("click", function(){
 
             let distances = calculateDistances(userLat, userLong)
 
-            elLat.innerHTML = "Your Latitude: " +userLat
-            elLong.innerHTML = "Your Longitude: " +userLong
+            elLat.innerHTML = "Your Latitude: " + userLat
+            elLong.innerHTML = "Your Longitude: " + userLong
             elDpulze.innerHTML = "Distance to Dpulze, Cyberjaya is: " + distances[0] + "km"
             elKlcc.innerHTML = "Distance KLCC is: " + distances[2] + "km"
             elSunway.innerHTML = "Distance to Sunway Pyramid: " + distances[1] + "km"
