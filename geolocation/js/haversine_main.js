@@ -8,8 +8,8 @@ function calculateDistance(lat, lon){
     
 }
 
-let ellocate = document.getElementById("locate")
-ellocate.addEventListener("click", function(){
+let elLocate = document.getElementById("locate")
+elLocate.addEventListener("click", function(){
     if(navigator.geolocation){
         navigator.geolocation.getCurrentPosition(function(position){
             let elLat = document.getElementById("lat")
