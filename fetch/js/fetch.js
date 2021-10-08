@@ -71,7 +71,7 @@ elLoadGender.addEventListener("click",function(){
 })  
 
 function loadGender(gender, userCount){
-    let url = "https://randomuser.me/api/?results=" +userCount + "&gender=" + gender }
+    let url = "https://randomuser.me/api/?results=" +userCount + "&gender=" + gender 
     
 console.log(url)
 
@@ -97,3 +97,4 @@ fetch(url)
 } )
 
 
+}
