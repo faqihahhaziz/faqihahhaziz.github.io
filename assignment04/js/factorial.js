@@ -8,4 +8,5 @@ f = f * i;
 }  
 i = i - 1;    
 document.getElementById("result").innerHTML = "The factorial of the number " + i + " is: " + f ;  
+
 }  
