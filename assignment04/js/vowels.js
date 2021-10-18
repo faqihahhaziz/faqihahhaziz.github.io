@@ -1,5 +1,5 @@
 
-    function GetVowels() {
+    function getVowels() {
       var str = document.getElementById('inputText').value;
       var count = 0, total_vowels="";
       for (var i = 0; i < str.length; i++) {
