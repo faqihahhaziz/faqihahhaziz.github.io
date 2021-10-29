@@ -1,0 +1,63 @@
+let refreshNowBtn = document.getElementById("refreshNow")
+refreshNowBtn.addEventListener("click", function (){
+    GetBooking()
+})
+
+function GetBooking() {
+    let url = 'https://api.sheety.co/ae02c4c5b9ec492d9070b7a6411980c2/icecreamApp/bookings';
+    fetch(url)
+        .then((response) => response.json())
+        .then(json => {
+
+            console.log(json.bookings);
+
+  let bookingNameList = document.getElementById("bookingNameList")
+  let bookingIds = []
+
+  for (let k = bookingNameList.rows.length - 1; k > 0; k--){
+      bookingNameList.deleteRow(k)
+  }
+
+  for (let i = 0; i < json.bookings.length; i++) {
+      let gName = json.bookings[i].name;
+      let gEmail = json.bookings[i].email;
+      let gFlavours = json.bookings[i].flavours;
+      let gFlavoursQuan = json.bookings[i].quantity;
+      let gRemarks = json.bookings[i].remarks;
+      let gId = json.bookings[i].id;
+      let btnId = "delete" + gId;
+
+
+      let row = bookingNameList.insertRow(bookingNameList.rows.length)
+      row.insertCell(0).innerHTML = gId
+      row.insertCell(1).innerHTML = gName
+      row.insertCell(2).innerHTML = gEmail
+      row.insertCell(3).innerHTML = gFlavours
+      row.insertCell(4).innerHTML = gFlavoursQuan
+      row.insertCell(5).innerHTML = gRemarks
+      row.insertCell(6).innerHTML = "<button id= '"+ btnId + "' type='button' class='btn btn-danger'>Delete</button>"
+
+      bookingIds.push(btnId)
+  }
+  for (let j = 0; j < bookingIds.length; j++){
+      let el = document.getElementById(bookingIds[j])
+      el.addEventListener("click", function(){
+          let theId = el.id.replace("delete", "")
+          DeleteBooking(theId)
+      })
+  }
+});
+}
+
+function DeleteBooking(id) {
+    let url = 'https://api.sheety.co/ae02c4c5b9ec492d9070b7a6411980c2/icecreamApp/bookings/' + id;
+    fetch(url, {
+        method: 'DELETE',
+    })
+        
+        .then(() => {
+            alert("Record id " + id + "deleted!")
+            GetBooking()
+        });
+}
+   
