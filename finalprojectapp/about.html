@@ -4,40 +4,120 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>List | Eskremqiahaha</title>
+    <title>About | Qiahaha's Eskrem</title>
     <link rel="icon" type="image/x-icon" href="/finalprojectapp/finalproject aiskrim/logo.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 
     <style>
     
-        body {
-            background-color:antiquewhite;
-            background-image:url("https://data.whicdn.com/images/256003293/original.jpg");
-              background-repeat:no-repeat;
-              background-size:100% 100%;
-            background-attachment:fixed;
-        }
-    
-        @font-face {
-            font-family: delightCandles;
-            src: url(delight_candles.woff);
-        }
-        .font1{
-            color:plum;
-            font-size:50px;
-            font-family:"Delight Candles";
-            text-align:center;
-            
-        }
+    body {
+        background-color:antiquewhite;
+        background-image:url("https://data.whicdn.com/images/256003293/original.jpg");
+          background-repeat:no-repeat;
+          background-size:100% 100%;
+        background-attachment:fixed;
+    }
+
+    @font-face{
+        font-family: delightCandles;
+        src: url(delight_candles.woff);
+    }
+    @font-face{
+        font-family:candyBeans;
+        src: url(candy-beans.woff)
+    }
+    .font1{
+        color:plum;
+        font-size:50px;
+        font-family:"Delight Candles";
+        text-align:center;
+        
+    }
+
+   
 
       .textShadow{
         text-shadow:5px 5px 5px black;
       }
-        </style>
-       
-       
+
+      .font2{
+        text-align:center;
+        
+}
+
+.borderFlavours{
+    border-width:3px;
+    border-color:lightgray;
+    border-style:outset;
+    width:1000px;
    
-       
+}
+* {
+    box-sizing: border-box;
+}
+.column{
+    float: center;
+    width: 100%;
+    padding: 30px;
+}
+.row::after {
+    content: "";
+    clear:both;
+    display:table;
+}
+.container{
+    position:relative;
+    width:50%;
+}
+.image{
+    display:block;
+    width:35%;
+    margin-right: auto;
+    margin-left: auto;
+    
+   
+}
+.image1{
+    display:block;
+    margin-right: auto;
+    margin-left: auto;
+    width:25%;
+   
+  
+}
+
+.overlay{
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    height:100%;
+    width:50%;
+    opacity:0%;
+    transition: .5s ease;
+    background-color:pink;
+}
+.container:hover .overlay {
+    opacity:1;
+}
+.text{
+    color:white;
+    font-size:20px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
+    text-align:center;
+}
+
+
+
+    </style>
+   
+   
 </head>
 <body>
     <div class="p-3 mb-2 bg-dark text-white">Welcome!</div>
@@ -80,42 +160,27 @@
         </div>
         </div>
         <div class="font1 textShadow">Qiahaha's Eskrem</div>
+        <br><br>
 
-        <div class="row">
-            <div class="col">
-                <div class="jumbotron">
-                    <h1 class="display-4">Here is our booking list!</h1>
-                    <p class="lead">Call Them To Confirm!</p>
-                   
-                  </div>
-            </div>
+        <div>
+
+            <img src="/finalprojectapp/finalproject aiskrim/about.png"  alt="About Us" class="image1">
             
+
+
         </div>
-    
-        <!--Booking List-->
-    
-        <div class="row">
-            <div class="col">
-                <button types="button" class="btn-primary" id="refreshNow">Refresh Now</button>
-                <table class="table table-striped" id="bookingNameList">
-                    <thead>
-                      <tr>
-                        <th scope="col">ID</th>
-                        <th scope="col">Name</th>
-                        <th scope="col">Email</th>
-                        <th scope="col">Flavours</th>
-                        <th scope="col">Quantity</th>
-                        <th scope="col">Remarks</th>
-                        <th scope="col">Task</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                    </tbody>
-                  </table>
-                   
-                  </div>
-            </div>
-    
+
+        <br><br>
+
+
+        <div>
+
+        <h4 class=font2>Find Us On Instagram!</h4>
+
+
+        <a  href="https://www.instagram.com/eskremqiahaha/" target="_blank">
+            <img  src="/finalprojectapp/finalproject aiskrim/logo.png" class="image1">
+          
 
 
 
@@ -123,11 +188,15 @@
 
 
 
-        
+        </a>
+        </div>
+
+
+       
+
+
+         
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
-
-        <script src="js/list.js"></script>
-        
 </body>
 </html>
