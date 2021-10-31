@@ -4,7 +4,7 @@ refreshNowBtn.addEventListener("click", function (){
 })
 
 function GetBooking() {
-    let url = 'https://api.sheety.co/ae02c4c5b9ec492d9070b7a6411980c2/icecreamApp/bookings';
+    let url = 'https://api.sheety.co/2f77a16cc9c98f370a1827c18b5c8d80/icecreamApp/bookings';
     fetch(url)
         .then((response) => response.json())
         .then(json => {
@@ -50,7 +50,7 @@ function GetBooking() {
 }
 
 function DeleteBooking(id) {
-    let url = 'https://api.sheety.co/ae02c4c5b9ec492d9070b7a6411980c2/icecreamApp/bookings/' + id;
+    let url = 'https://api.sheety.co/2f77a16cc9c98f370a1827c18b5c8d80/icecreamApp/bookings/' + id;
     fetch(url, {
         method: 'DELETE',
     })
